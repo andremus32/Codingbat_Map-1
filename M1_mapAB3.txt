@@ -1,0 +1,18 @@
+//Map-1 > mapAB3
+public Map<String, String> mapAB3(Map<String, String> map) {
+  if(map.containsKey("a") && map.containsKey("b")){
+    if(map.get("a").length() > 0 && map.get("b").length() == 0){
+      map.put("b", map.get("a"));
+    }
+    else if(map.get("a").length() == 0 && map.get("b").length() > 0){
+      map.put("a", map.get("b"));
+    }
+  }
+  else if(map.containsKey("a")){
+    map.put("b", map.get("a"));
+    }
+  else if(map.containsKey("b")){
+    map.put("a", map.get("b"));
+  }
+  return map;
+}
